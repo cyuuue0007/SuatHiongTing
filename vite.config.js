@@ -6,6 +6,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [vue()],
+  base: '/SuatHiongTing/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),  // 用 path 模組做絕對路徑
@@ -16,9 +17,9 @@ export default defineConfig({
       scss: {
         additionalData: `@use "@/assets/styles/variables.scss" as *;`,
       },
-  build: {
-    outDir: 'dist'
-  }    
     },
   },
+  build: { 
+    outDir: 'dist'  // 修正語法錯誤
+  }
 })
