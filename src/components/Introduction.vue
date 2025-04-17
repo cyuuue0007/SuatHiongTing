@@ -1,67 +1,94 @@
-<!-- src/components/WelcomeSection.vue -->
 <template>
   <section class="content">
-    <div class="content-bg">
-      <img src="@/assets/bg_fullpage.png" alt="網站背景" />
-    </div>
-    <div class="contenr-wrapper">
-      <div class="introduction-img">
-        <img src="@/assets/introduction-img-1.png" alt="簡介圖片" />
-      <div class="text-content">
-        <div class="text1">
-          <a>歡迎來到雪香庭。</a>
-        </div>    
-        <div class="text2">
-          <a>雪香亭以大林早期最大酒家「雪香亭大酒家」為命名， 希望藉由老屋空間結合甜食咖啡，來創造雪香亭招牌的新生命， 並讓更多人進入空間認識地方文化背景。</a>
-        </div>
-        <button class="btn-outline">更多介紹</button>  
+    <div class="content-wrapper">
+      <div class="left-col">
+        <img src="@/assets/introduction-img-1.png" alt="簡介圖片" class="intro-img" />
       </div>
+      <div class="right-col">
+        <div class="text1">歡迎來到雪香庭。</div>
+        <div class="text2">
+          雪香亭以大林早期最大酒家「雪香亭大酒家」為命名，<br />
+          希望藉由老屋空間結合甜食咖啡，來創造雪香亭招牌的新生命，<br />
+          並讓更多人進入空間認識地方文化背景。
+        </div>
+        <button class="btn-outline">更多介紹</button>
       </div>
     </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
-
-/* 主區塊 */
-.content-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 1200px;              /* 設定固定寬度 */
-  height: 600px;              /* 設定固定高度 */
-  background-image: url('@/assets/bg_fullpage.png'); /* 背景圖片 */
-  background-size: contain;  /* 保持圖片比例，縮放至容器內完整顯示 */
-  background-position: center; /* 背景圖片置中顯示 */
-  background-repeat: no-repeat; /* 防止圖片重複 */
-  z-index: -1;
-}
-
-/* 主區塊背景 */
-.content-bg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.content {
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* 讓圖片完整鋪滿區塊，不變形 */
-  z-index: -1;
-}
-
-/* 簡介圖片 */
-.introduction-img {
-  position: relative;     /* 使區塊可使用定位 */
-  margin: 0;
-  width: 590px;
-  height: 758px;
-  top: 50px;              /* 從上方偏移50px */
-  left: 500px;             /* 從左側偏移30px */
-}
-
-/* 簡介文字區 */
-.text-content {
+  height: 100vh;
+  background-image: url('@/assets/bg_fullpage.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
-  background-color: $white;
+  justify-content: center;
+  align-items: center;
+}
 
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  padding: 40px;
+  gap: 60px;
+  background-color: rgba(255, 255, 255, 0.8); // 讓背景圖透出一點，但字好讀
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.left-col, .right-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-col {
+  align-items: center;
+}
+
+.right-col {
+  gap: 20px;
+}
+
+.intro-img {
+  width: 100%;
+  max-width: 590px;
+  height: auto;
+}
+
+.text1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.text2 {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.btn-outline {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #333;
+  background-color: transparent;
+  color: #333;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #333;
+  color: #fff;
 }
 </style>
