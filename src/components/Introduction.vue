@@ -24,7 +24,6 @@
   height: 100vh;
   background-image: url('@/assets/bg_fullpage.png');
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
