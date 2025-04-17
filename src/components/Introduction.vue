@@ -7,12 +7,15 @@
     <div class="contenr-wrapper">
       <div class="introduction-img">
         <img src="@/assets/introduction-img-1.png" alt="簡介圖片" />
-      <div class="content-text1">
-         <a>歡迎來到雪香庭。</a>
+      <div class="text-content">
+        <div class="text1">
+          <a>歡迎來到雪香庭。</a>
+        </div>    
+        <div class="text2">
+          <a>雪香亭以大林早期最大酒家「雪香亭大酒家」為命名， 希望藉由老屋空間結合甜食咖啡，來創造雪香亭招牌的新生命， 並讓更多人進入空間認識地方文化背景。</a>
+        </div>
+        <button class="btn-outline">更多介紹</button>  
       </div>
-      <div class="content-text2">
-        <a>雪香亭以大林早期最大酒家「雪香亭大酒家」為命名， 希望藉由老屋空間結合甜食咖啡，來創造雪香亭招牌的新生命， 並讓更多人進入空間認識地方文化背景。</a>        </div>
-        <button class="btn-outline">更多介紹</button>
       </div>
     </div>
   </section>
@@ -47,15 +50,18 @@
 
 /* 簡介圖片 */
 .introduction-img {
-  position: relative;
+  position: relative;     /* 使區塊可使用定位 */
   margin: 0;
   width: 590px;
   height: 758px;
+  top: 50px;              /* 從上方偏移50px */
+  left: 500px;             /* 從左側偏移30px */
 }
 
-/* 簡介文字 */
-.content-text1 {
+/* 簡介文字區 */
+.text-content {
   display: flex;
+  background-color: $white;
 
 }
 </style>
