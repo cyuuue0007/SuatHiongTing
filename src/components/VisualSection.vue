@@ -16,7 +16,6 @@
         <img src="@/assets/shop.jpg" alt="店面照片" />
       </div>
 
-
       <!-- 店面圖片效果 -->
       <div class="content2">
         <img src="@/assets/shopBG.svg" alt="店面照片背景" >
@@ -44,15 +43,6 @@
 
 /* 店面圖片 */
 .content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* 店面圖片效果 */
-.content2 {
   position: absolute;
   top: 0;
   left: 0;
