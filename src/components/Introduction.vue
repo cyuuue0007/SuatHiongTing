@@ -22,7 +22,6 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('@/assets/bg_fullpage.png');
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
