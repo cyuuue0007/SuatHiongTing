@@ -352,9 +352,9 @@
     flex-direction: column;
     gap: 12px;
     z-index: 1000;
-}
-
-.floating-socials a {
+  }
+  
+  .floating-socials a {
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 8px 10px;
@@ -364,12 +364,13 @@
     font-size: 14px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-}
-
-.floating-socials a:hover {
+  }
+  
+  .floating-socials a:hover {
     background-color: #f5f5f5;
     transform: translateX(4px);
-}
+  }
+  
 
 
 
