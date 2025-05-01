@@ -1,0 +1,89 @@
+//顏色
+$white: #EFECE7;
+$black: #160601;
+
+
+//字體
+
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+
+// Utilities.scss
+.d-flex {
+    display: flex;
+}
+.d-flex-j-start-a-center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.align-items-center {
+    align-items: center;
+}
+.p-relative {
+    position: relative;
+}
+.p-absolute {
+    position: absolute;
+}
+
+// 使用 Flex 排版
+.d-flex { 
+    display: flex;
+}  
+// 橫向排列             
+.flex-row{
+    flex-direction: row;
+}  
+// 直向排列
+.flex-column{
+    flex-direction: column;
+}  
+
+// 左對齊
+.justify-start{
+    justify-content: flex-start;
+}
+// 水平置中    
+.justify-center {
+    justify-content: center;
+}
+// 兩端對齊        
+.justify-between {
+    justify-content: space-between;
+} 
+// 右對齊
+.justify-end {
+    justify-content: flex-end;
+} 
+
+// 頂端對齊
+.align-start {
+    align-items: flex-start;
+}  
+// 垂直置中 
+.align-center {
+    align-items: center;
+}
+// 底部對齊       
+.align-end {
+    align-items: flex-end;
+}     
+// 換行排列
+.flex-wrap {
+    flex-wrap: wrap;
+}           
