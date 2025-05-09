@@ -1,4 +1,4 @@
-//顏色
+/* 顏色 */
 $Primary:#6C3427;
 $Secoundary-Red:#B6362D;
 $Secoundary-Brown:#8A4D2A;
@@ -8,20 +8,17 @@ $Neutral-Gray:#EFECE7;
 $Neutral-Black:#160601;
 $Neutral-White:#FFFFFF;
 
-//字體
 
-
-
+/* 內容 */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: "Noto Sans TC", "sans-serif";
+    font-weight: 400;
 }
 
-
-
-// Utilities.scss
 .d-flex {
     display: flex;
 }
@@ -45,50 +42,3 @@ html, body {
 .p-absolute {
     position: absolute;
 }
-
-// 使用 Flex 排版
-.d-flex { 
-    display: flex;
-}  
-// 橫向排列             
-.flex-row{
-    flex-direction: row;
-}  
-// 直向排列
-.flex-column{
-    flex-direction: column;
-}  
-
-// 左對齊
-.justify-start{
-    justify-content: flex-start;
-}
-// 水平置中    
-.justify-center {
-    justify-content: center;
-}
-// 兩端對齊        
-.justify-between {
-    justify-content: space-between;
-} 
-// 右對齊
-.justify-end {
-    justify-content: flex-end;
-} 
-
-// 頂端對齊
-.align-start {
-    align-items: flex-start;
-}  
-// 垂直置中 
-.align-center {
-    align-items: center;
-}
-// 底部對齊       
-.align-end {
-    align-items: flex-end;
-}     
-// 換行排列
-.flex-wrap {
-    flex-wrap: wrap;
-}           
