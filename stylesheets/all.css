@@ -4721,7 +4721,7 @@ html, body {
   width: 100vw;
   height: auto;
   max-width: 1920px;
-  background-image: url("/assets/bg_fullpage.png");
+  background-image: url("./assets/bg_fullpage.png");
   background-repeat: no-repeat;
   margin: 0 auto;
 }
