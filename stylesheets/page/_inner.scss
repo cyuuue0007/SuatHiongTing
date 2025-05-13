@@ -22,7 +22,98 @@
     margin-left: 80px;
     margin-right: 80px;
     z-index: 100;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
+
+.navbar-rwd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    padding: 0 10%;
+    z-index: 100;
+    margin-top: 5%;
+    @media screen and (min-width: 768px) {
+    }
+}
+
+.navbar-rwd-logo {
+    display: flex;
+    position: fixed;
+    width: 100px;
+        @media screen and (min-width:768px) {
+        display: none;
+    }
+}
+
+.navbar-rwd-menu {
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    margin-left: 80%;
+    cursor: pointer;
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+}
+/* 預設隱藏漢堡開啟後的選單 */
+.navbar-rwd-open {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#582818, #4d1703);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.navbar-rwd-open.active {
+    display: flex;
+}
+
+.navbar-rwd-logo-black {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+}
+
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.navbar-list-rwd {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.navbar-list-rwd li {
+    margin: 20px 0;
+}
+
+.list-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
 /* 全站 end */
 
 /* 主視覺 start */

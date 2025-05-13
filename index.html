@@ -10,6 +10,7 @@
 <body>
 
     <div class="main">
+        <div class="main-background"></div>
         <div class="main-content">
             <!-- 主視覺 start -->
             <nav class="navbar">
@@ -22,6 +23,19 @@
                     </ul>
                 </div>
             </nav>
+            <div class="navbar-rwd">
+                <img src="./assets/logo2.png" class="navbar-rwd-logo" alt="logo" />
+                <img src="./assets/menu.png" class="navbar-rwd-menu" alt="menu" /> 
+            </div>
+            <div class="navbar-rwd-open">
+                <img src="./assets/logo2-black.png" class="navbar-rwd-logo-black" alt="logo" />
+                <img src="./assets/menu-close.png" class="menu-close" alt="menu-close" />
+                <ul class="navbar-list-rwd">
+                        <li><a href="#" class="list-item">關於我們</a></li>
+                        <li><a href="#" class="list-item">販售好物</a></li>
+                        <li><a href="#" class="list-item">如何抵達</a></li>
+                    </ul>
+            </div>
             <header>
                 <div class="bg">
                     <img src="./assets/shop.jpg" class="bg-img" alt="主視覺">
@@ -123,5 +137,18 @@
     </div>
     <!-- 社群按鈕 start -->
 
+<script>
+    const menuOpenBtn = document.querySelector('.navbar-rwd-menu');
+    const menuCloseBtn = document.querySelector('.menu-close');
+    const navbarMenu = document.querySelector('.navbar-rwd-open');
+
+    menuOpenBtn.addEventListener('click', () => {
+        navbarMenu.classList.add('active');
+    });
+
+    menuCloseBtn.addEventListener('click', () => {
+        navbarMenu.classList.remove('active');
+    });
+</script>
 </body>
 </html>

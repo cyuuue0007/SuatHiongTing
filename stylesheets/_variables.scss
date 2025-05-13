@@ -11,9 +11,10 @@ $Neutral-White:#FFFFFF;
 
 /* 內容 */
 html, body {
-    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     overflow-x: hidden;
     font-family: "Noto Sans TC", "sans-serif";
     font-weight: 400;
