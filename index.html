@@ -23,7 +23,7 @@
                     </ul>
                 </div>
             </nav>
-            <div class="navbar-rwd">
+            <div class="navbar-rwd navbar-scroll">
                 <img src="./assets/logo2.png" class="navbar-rwd-logo" alt="logo" />
                 <img src="./assets/menu.png" class="navbar-rwd-menu" alt="menu" /> 
             </div>
@@ -134,6 +134,7 @@
     </div>
     <!-- 社群按鈕 start -->
 
+<!--漢堡選單動畫-->
 <script>
     const menuOpenBtn = document.querySelector('.navbar-rwd-menu');
     const menuCloseBtn = document.querySelector('.menu-close');
@@ -147,6 +148,8 @@
         navbarMenu.classList.remove('active');
     });
 </script>
+
+<!--社群按鈕動畫-->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const socialBtn = document.querySelector('.floating-socials');
@@ -164,5 +167,21 @@
         });
     });
 </script>
+
+<!-- 選單下滑動畫-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.querySelector('.navbar-scroll');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('active');
+            } else {
+                navbar.classList.remove('active');
+            }
+        });
+    });
+</script>
+
 </body>
 </html>

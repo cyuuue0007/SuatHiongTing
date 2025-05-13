@@ -36,9 +36,25 @@
     width: 100%;
     padding: 0 10%;
     z-index: 100;
-    margin-top: 5%;
-    @media screen and (min-width: 768px) {
+        @media screen and (min-width: 768px) {
+        display: none;
     }
+}
+
+.navbar-scroll.active {
+    background-color: $Neutral-Gray;
+}
+
+.navbar-scroll.active .navbar-rwd-logo {
+    content: url('../../assets/logo2-black.png'); /* 換成黑色 logo */
+}
+
+.navbar-scroll.active .navbar-rwd-menu {
+    content: url('../../assets/menu-black.png'); /* 換成黑色 logo */
+}
+
+.navbar-scroll {
+    transition: background-color 1s ease, padding 0.8s ease;
 }
 
 .navbar-rwd-logo {

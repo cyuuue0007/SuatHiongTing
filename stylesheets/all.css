@@ -4752,8 +4752,29 @@ html, body {
   width: 100%;
   padding: 0 10%;
   z-index: 100;
-  margin-top: 5%;
 }
+@media screen and (min-width: 768px) {
+  .navbar-rwd {
+    display: none;
+  }
+}
+
+.navbar-scroll.active {
+  background-color: #EFECE7;
+}
+
+.navbar-scroll.active .navbar-rwd-logo {
+  content: url("../../assets/logo2-black.png"); /* 換成黑色 logo */
+}
+
+.navbar-scroll.active .navbar-rwd-menu {
+  content: url("../../assets/menu-black.png"); /* 換成黑色 logo */
+}
+
+.navbar-scroll {
+  transition: background-color 1s ease, padding 0.8s ease;
+}
+
 .navbar-rwd-logo {
   display: flex;
   position: fixed;
