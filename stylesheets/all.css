@@ -4764,11 +4764,11 @@ html, body {
 }
 
 .navbar-scroll.active .navbar-rwd-logo {
-  content: url("../../assets/logo2-black.png"); /* 換成黑色 logo */
+  content: url("../assets/logo2-black.png"); /* 換成黑色 logo */
 }
 
 .navbar-scroll.active .navbar-rwd-menu {
-  content: url("../../assets/menu-black.png"); /* 換成黑色 logo */
+  content: url("../assets/menu-black.png"); /* 換成黑色 logo */
 }
 
 .navbar-scroll {
