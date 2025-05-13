@@ -120,9 +120,6 @@
     <!-- 社群按鈕 start -->
     <div class="floating-socials">
         <div class="container-floating-socials">
-            <div class="floating-socials-tittle">
-                <span>追蹤阮</span>
-            </div>
             <div class="floating-socials-icon-ins">
                 <a href="https://www.instagram.com/suathiongting/" target="_blank">
                     <img src="./assets/icon-instagram.png" class="icon-ins" alt="ig連結" />
@@ -148,6 +145,23 @@
 
     menuCloseBtn.addEventListener('click', () => {
         navbarMenu.classList.remove('active');
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const socialBtn = document.querySelector('.floating-socials');
+
+        window.addEventListener('scroll', () => {
+            // 一屏高度
+            const screenHeight = window.innerHeight;
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+            if (scrollTop > screenHeight) {
+                socialBtn.classList.add('show');
+            } else {
+                socialBtn.classList.remove('show');
+            }
+        });
     });
 </script>
 </body>
