@@ -5,8 +5,8 @@
 .main {
     text-align: center;
     background-color: $Neutral-Gray;
-    width: 100vw;
-    height: auto;
+    width: 100%;
+    height: 100%;
     max-width: 1920px;
     background-image: url('../assets/bg_fullpage.png');
     background-repeat: no-repeat;
@@ -16,8 +16,9 @@
 .container-main {
     display: flex;
     position: fixed;
+    justify-content: space-between;
     height: 64px;
-    width: 1776px;
+    width: calc(100% - 160px);
     margin-top: 32px;
     margin-left: 80px;
     margin-right: 80px;
@@ -220,8 +221,15 @@
 .store-intro {
     width: 1920px;
     height: 1080px;
+    flex-wrap: wrap;
     padding: 152px 460px;
     box-sizing: border-box;
+
+    @media screen and (max-width:768px) {
+        width: 100%;
+        height: auto;
+        padding: 80px 16px;
+    }
 }
 
 .container-store-intro {
@@ -231,6 +239,12 @@
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
+        @media screen and (max-width:768px) {
+        flex-direction: column; /* 變成垂直排列 */
+        width: 100%;
+        height: auto;
+        gap: 24px; /* 項目之間加些間距 */
+    }
 }
 
 .store-img,
@@ -239,12 +253,20 @@
     height: 640px;
     flex-shrink: 0;
     box-sizing: border-box;
+        @media screen and (max-width:768px) {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .store-img {
     display: flex;
     justify-content: center;
     align-items: center;
+        @media screen and (max-width:768px) {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .store-img img {
@@ -252,6 +274,10 @@
     height: 100%;
     object-fit: cover;
     display: block;
+        @media screen and (max-width:768px) {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .store-txt {
@@ -278,7 +304,11 @@
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
-    line-height: 48px; 
+    line-height: 48px;
+        @media screen and (max-width:768px) {
+        width: 100%;
+        height: auto;
+    } 
 }
 
 .store-intro-desc {
@@ -317,6 +347,9 @@
     gap: 8px;
     flex-shrink: 0;
     border: 1px solid #441200;
+        @media screen and (min-width:768px) {
+        width: 100%;
+    }
 }
 
 .btn-intro-learn-more:hover {
@@ -325,31 +358,6 @@
     color: $Neutral-Gray;
 }
 
-/* 🎯 RWD for mobile */
-@media screen and (max-width: 768px) {
-    .container-store-intro {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .store-img,
-    .store-txt {
-        width: 100%;
-    }
-
-    .store-intro {
-        padding: 20px;
-    }
-
-    .store-title {
-        font-size: 24px;
-    }
-
-    .store-txt {
-        font-size: 15px;
-    }
-}
 /* 商店介紹 end */
 
 /* 產品輪播 start */
