@@ -4721,7 +4721,6 @@ html, body {
   background-color: #EFECE7;
   width: 100vw;
   height: auto;
-  max-width: 1920px;
   background-image: url("../assets/bg_fullpage.png");
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -4909,34 +4908,20 @@ html, body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  max-width: 1920px;
   overflow: hidden;
 }
 
-.bg-img,
-.shop-img-cover {
+/* 主要主視覺圖片 */
+.bg-img {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 1;
-}
-
-.shop-img-cover {
-  z-index: 2;
-}
-
-.bg-cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 3;
 }
 
 /* 主視覺 end */
