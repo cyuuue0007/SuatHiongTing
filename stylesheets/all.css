@@ -4954,12 +4954,12 @@ html, body {
 
 .container-store-intro {
   display: flex;
-  width: 1000px;
+  width: 100%;
+  min-width: 1000px;
   height: 640px;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  /* 讓這層也置中 */
   box-sizing: border-box;
 }
 
@@ -5057,24 +5057,55 @@ html, body {
 }
 
 /* 🎯 RWD for mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .container-store-intro {
     flex-direction: column;
-    gap: 20px;
-    text-align: center;
+    /* 變成上下排列 */
+    width: 90%;
+    /* 寬度縮小一點，避免超出 */
+    min-width: unset;
+    /* 取消 min-width 限制 */
+    height: auto;
+    /* 高度自適應 */
+    gap: 30px;
+    /* 上下間距 */
+    padding: 0 10px;
+    /* 兩側留邊距 */
+    box-sizing: border-box;
   }
   .store-img,
   .store-txt {
     width: 100%;
+    /* 兩邊寬度撐滿容器 */
+    height: auto;
+    /* 高度自動 */
   }
-  .store-intro {
-    padding: 20px;
-  }
-  .store-title {
-    font-size: 24px;
+  .store-img img {
+    height: auto;
+    /* 保持比例，避免變形 */
+    max-width: 100%;
+    /* 不超出容器 */
   }
   .store-txt {
-    font-size: 15px;
+    padding: 32px 16px;
+    /* 文字區塊內距調整 */
+  }
+  .store-intro {
+    padding: 80px 0;
+    /* 上下 padding 變小，避免太多空白 */
+  }
+  .store-intro-title {
+    width: 100%;
+    font-size: 28px;
+    /* 字體縮小 */
+  }
+  .store-intro-desc {
+    width: 100%;
+    font-size: 14px;
+  }
+  .btn-intro-learn-more {
+    width: 200px;
+    font-size: 14px;
   }
 }
 /* 商店介紹 end */
