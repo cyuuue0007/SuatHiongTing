@@ -204,6 +204,15 @@
     <script>
         window.addEventListener('load', () => {
             const wrapper = document.querySelector('.carousel-wrapper');
+            const items = wrapper.querySelectorAll('.carousel-item');
+
+            // 複製每一個 carousel-item 並加到最後面
+            items.forEach(item => {
+                const clone = item.cloneNode(true);
+                wrapper.appendChild(clone);
+            });
+
+            // 如果有做 CSS 動畫，要讓它開始
             wrapper.style.animationPlayState = 'running';
         });
     </script>
