@@ -4,12 +4,24 @@
 /* 全站 start */
 .main {
     text-align: center;
-    background-color: $Neutral-Gray;
     width: 100vw;
     height: auto;
-    background-image: url('../assets/bg_fullpage.png');
-    background-repeat: no-repeat;
     margin: 0 auto;
+}
+
+.main-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.main-background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .navbar-wrapper {
@@ -33,7 +45,8 @@
     width: 100%;
     padding: 0 10%;
     z-index: 100;
-        @media screen and (min-width: 768px) {
+
+    @media screen and (min-width: 768px) {
         display: none;
     }
 }
@@ -43,11 +56,13 @@
 }
 
 .navbar-scroll.active .navbar-rwd-logo {
-    content: url('../assets/logo2-black.png'); /* 換成黑色 logo */
+    content: url('../assets/logo2-black.png');
+    /* 換成黑色 logo */
 }
 
 .navbar-scroll.active .navbar-rwd-menu {
-    content: url('../assets/menu-black.png'); /* 換成黑色 logo */
+    content: url('../assets/menu-black.png');
+    /* 換成黑色 logo */
 }
 
 .navbar-scroll {
@@ -58,7 +73,8 @@
     display: flex;
     position: fixed;
     width: 100px;
-        @media screen and (min-width:768px) {
+
+    @media screen and (min-width:768px) {
         display: none;
     }
 }
@@ -72,10 +88,12 @@
     margin-bottom: 5%;
     margin-left: 80%;
     cursor: pointer;
+
     @media screen and (min-width:768px) {
         display: none;
     }
 }
+
 /* 預設隱藏漢堡開啟後的選單 */
 .navbar-rwd-open {
     display: none;
@@ -145,9 +163,9 @@
 }
 
 .brand img {
-    width: 100px; 
-    height: 100px; 
-    object-fit: contain; 
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
     margin: 10px 0px 10px 100px;
 }
 
@@ -156,15 +174,15 @@
     justify-content: center;
     list-style: none;
     margin-left: auto;
-    margin-right: 5%; 
-    margin-bottom: 0; 
+    margin-right: 5%;
+    margin-bottom: 0;
 }
 
 .navbar-list li {
     display: flex;
     height: 100%;
-    justify-content: center; 
-    align-items: center;   
+    justify-content: center;
+    align-items: center;
 }
 
 .list-item {
@@ -199,14 +217,17 @@
     object-fit: cover;
     z-index: 1;
 }
+
 /* 主視覺 end */
 
 /* 商店介紹 start */
 .store-intro {
     width: 100%;
     height: 1080px;
-    margin: 0 auto;  /* 置中容器 */
-    padding: 152px 0;  /* 上下 padding，左右改成 0 */
+    margin: 0 auto;
+    /* 置中容器 */
+    padding: 152px 0;
+    /* 上下 padding，左右改成 0 */
     box-sizing: border-box;
 }
 
@@ -216,7 +237,8 @@
     height: 640px;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;  /* 讓這層也置中 */
+    margin: 0 auto;
+    /* 讓這層也置中 */
     box-sizing: border-box;
 }
 
@@ -265,7 +287,7 @@
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
-    line-height: 48px; 
+    line-height: 48px;
 }
 
 .store-intro-desc {
@@ -337,13 +359,14 @@
         font-size: 15px;
     }
 }
+
 /* 商店介紹 end */
 
 /* 產品輪播 start */
 .container-product {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
 
 .product-list {
@@ -386,7 +409,7 @@
     align-items: center;
 }
 
-.btn-wrapper-product{
+.btn-wrapper-product {
     display: flex;
     width: 100vw;
     padding: 70px 772px;
@@ -408,11 +431,13 @@
     color: $Neutral-Gray;
     text-decoration: none;
 }
+
 .btn-product-learn-more:hover {
     background-color: $Neutral-Gray;
     border-color: $Neutral-Gray;
     color: $Primary;
 }
+
 /* 產品輪播 start */
 
 /* footer start */
@@ -460,6 +485,7 @@
     line-height: 14px;
     margin-top: 174px;
 }
+
 /* footer end */
 
 /* 社群按鈕 start*/
@@ -474,7 +500,7 @@
     flex-direction: column;
     align-items: center;
     z-index: 1000;
-    gap:8px;
+    gap: 8px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease-in-out;
@@ -493,6 +519,7 @@
     align-items: center;
     gap: 8px;
 }
+
 .floating-socials-tittle span {
     color: $Neutral-Gray;
     writing-mode: vertical-rl;
@@ -514,11 +541,5 @@
     margin: 10px 0;
     filter: drop-shadow(0 0 3px #EFECE7);
 }
+
 /* 社群按鈕 end*/
-
-
-
-
-
-
-

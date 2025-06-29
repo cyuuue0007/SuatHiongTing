@@ -4718,12 +4718,25 @@ html, body {
 /* 全站 start */
 .main {
   text-align: center;
-  background-color: #EFECE7;
   width: 100vw;
   height: auto;
-  background-image: url("../assets/bg_fullpage.png");
-  background-repeat: no-repeat;
   margin: 0 auto;
+}
+
+.main-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.main-background-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .navbar-wrapper {
@@ -4761,11 +4774,13 @@ html, body {
 }
 
 .navbar-scroll.active .navbar-rwd-logo {
-  content: url("../assets/logo2-black.png"); /* 換成黑色 logo */
+  content: url("../assets/logo2-black.png");
+  /* 換成黑色 logo */
 }
 
 .navbar-scroll.active .navbar-rwd-menu {
-  content: url("../assets/menu-black.png"); /* 換成黑色 logo */
+  content: url("../assets/menu-black.png");
+  /* 換成黑色 logo */
 }
 
 .navbar-scroll {
@@ -4929,8 +4944,10 @@ html, body {
 .store-intro {
   width: 100%;
   height: 1080px;
-  margin: 0 auto; /* 置中容器 */
-  padding: 152px 0; /* 上下 padding，左右改成 0 */
+  margin: 0 auto;
+  /* 置中容器 */
+  padding: 152px 0;
+  /* 上下 padding，左右改成 0 */
   box-sizing: border-box;
 }
 
@@ -4940,7 +4957,8 @@ html, body {
   height: 640px;
   align-items: center;
   justify-content: center;
-  margin: 0 auto; /* 讓這層也置中 */
+  margin: 0 auto;
+  /* 讓這層也置中 */
   box-sizing: border-box;
 }
 
