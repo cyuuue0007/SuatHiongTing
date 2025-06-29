@@ -4740,13 +4740,16 @@ html, body {
   display: block;
 }
 
+/* === 桌機版 navbar === */
 .navbar-wrapper {
   display: flex;
   position: fixed;
   height: 64px;
   width: 100vw;
-  margin-top: 2%;
+  top: 0;
+  left: 0;
   z-index: 100;
+  margin-top: 2%;
 }
 @media screen and (max-width: 768px) {
   .navbar-wrapper {
@@ -4754,14 +4757,18 @@ html, body {
   }
 }
 
+/* === 手機版 navbar 預設狀態 === */
 .navbar-rwd {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  height: 80px;
+  top: 0;
+  left: 0;
+  height: 60px;
+  /* 高度調小一點，看起來比較輕盈 */
   width: 100%;
-  padding: 0 10%;
+  padding: 0 20px;
   z-index: 100;
 }
 @media screen and (min-width: 768px) {
@@ -4770,28 +4777,35 @@ html, body {
   }
 }
 
-.navbar-scroll.active {
-  background-color: #EFECE7;
-}
-
-.navbar-scroll.active .navbar-rwd-logo {
-  content: url("../assets/logo2-black.png");
-  /* 換成黑色 logo */
-}
-
-.navbar-scroll.active .navbar-rwd-menu {
-  content: url("../assets/menu-black.png");
-  /* 換成黑色 logo */
-}
-
+/* 滾動狀態 */
 .navbar-scroll {
   transition: background-color 1s ease, padding 0.8s ease;
 }
+.navbar-scroll.active {
+  background-color: #EFECE7;
+}
+.navbar-scroll.active .navbar-rwd-logo {
+  content: url("../assets/logo2-black.png");
+}
+.navbar-scroll.active .navbar-rwd-menu {
+  content: url("../assets/menu-black.png");
+}
 
+/* === LOGO === */
 .navbar-rwd-logo {
-  display: flex;
   position: fixed;
-  width: 100px;
+  top: 10px;
+  /* 上下留白，剛好置中在 navbar */
+  left: 20px;
+  height: 40px;
+  /* 限高不超出 navbar */
+  width: auto;
+  z-index: 1000;
+}
+.navbar-rwd-logo img {
+  height: 100%;
+  /* 保持等比例縮放 */
+  width: auto;
 }
 @media screen and (min-width: 768px) {
   .navbar-rwd-logo {
@@ -4799,15 +4813,17 @@ html, body {
   }
 }
 
+/* === 漢堡按鈕 === */
 .navbar-rwd-menu {
-  display: flex;
-  position: absolute;
-  justify-content: flex-start;
-  margin-top: 5%;
-  margin-right: 10%;
-  margin-bottom: 5%;
-  margin-left: 80%;
+  position: fixed;
+  top: 18px;
+  /* 與 logo 對齊 */
+  right: 20px;
+  width: 24px;
+  /* 漢堡鈕大小不要太大 */
+  height: auto;
   cursor: pointer;
+  z-index: 1000;
 }
 @media screen and (min-width: 768px) {
   .navbar-rwd-menu {
@@ -4815,7 +4831,7 @@ html, body {
   }
 }
 
-/* 預設隱藏漢堡開啟後的選單 */
+/* === 漢堡開啟後的選單外層 === */
 .navbar-rwd-open {
   display: none;
   position: fixed;
@@ -4829,31 +4845,44 @@ html, body {
   justify-content: center;
   z-index: 999;
 }
-
 .navbar-rwd-open.active {
   display: flex;
 }
 
+/* 開啟後的 LOGO */
 .navbar-rwd-logo-black {
-  position: absolute;
-  top: 20px;
+  position: fixed;
+  top: 10px;
+  /* 與關閉鈕一起置中 */
   left: 20px;
-  width: 100px;
+  height: 40px;
+  width: auto;
+  z-index: 1000;
+}
+.navbar-rwd-logo-black img {
+  height: 100%;
+  width: auto;
 }
 
+/* 關閉按鈕 */
 .menu-close {
-  position: absolute;
-  top: 20px;
+  position: fixed;
+  top: 18px;
   right: 20px;
   width: 24px;
+  /* 關閉鈕跟漢堡鈕大小一致 */
+  height: auto;
   cursor: pointer;
+  z-index: 1000;
 }
 
+/* RWD 選單列表 */
 .navbar-list-rwd {
   list-style: none;
   padding: 0;
+  margin: 80px 0 0 0;
+  /* 與 LOGO 保留距離 */
   text-align: center;
-  margin-top: 80px;
 }
 
 .navbar-list-rwd li {
