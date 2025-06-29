@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>雪香亭</title>
     <link rel="stylesheet" href="./stylesheets/all.css">
     <link rel="icon" href="./assets/logo-icon-tab.png" type="image/png">
+    <meta property="og:type" content="雪香亭">
+    <meta property="og:title" content="雪香亭 | SuatHiongTing">
+    <meta property="og:description" content="豆花。咖啡。甜食">
+    <meta property="og:url" content="https://cyuuue0007.github.io/SuatHiongTing/">
+    <meta property="og:image" content="./assets/og-img.png">
 </head>
+
 <body>
 
     <div class="main">
         <!-- 背景 start -->
         <div class="main-wrapper">
-            <img src="./assets/bg_fullpage.png" class="main-wrapper-img"alt="底圖背景">
+            <img src="./assets/bg_fullpage.png" class="main-wrapper-img" alt="底圖背景">
         </div>
         <!-- 背景 end -->
 
@@ -31,16 +38,16 @@
             </nav>
             <div class="navbar-rwd navbar-scroll">
                 <img src="./assets/logo2.png" class="navbar-rwd-logo" alt="logo" />
-                <img src="./assets/menu.png" class="navbar-rwd-menu" alt="menu" /> 
+                <img src="./assets/menu.png" class="navbar-rwd-menu" alt="menu" />
             </div>
             <div class="navbar-rwd-open">
                 <img src="./assets/logo2-black.png" class="navbar-rwd-logo-black" alt="logo" />
                 <img src="./assets/menu-close.png" class="menu-close" alt="menu-close" />
                 <ul class="navbar-list-rwd">
-                        <li><a href="#" class="list-item">關於我們</a></li>
-                        <li><a href="#" class="list-item">販售好物</a></li>
-                        <li><a href="#" class="list-item">如何抵達</a></li>
-                    </ul>
+                    <li><a href="#" class="list-item">關於我們</a></li>
+                    <li><a href="#" class="list-item">販售好物</a></li>
+                    <li><a href="#" class="list-item">如何抵達</a></li>
+                </ul>
             </div>
             <!-- 選單 end -->
 
@@ -64,7 +71,7 @@
                         <h1 class="store-intro-title">歡迎來到雪香亭。</h1>
                         <p class="store-intro-desc">
                             <a>雪香亭以大林早期最大酒家「雪香亭大酒家」為命名， </a>
-                            <a>希望藉由老屋空間結合甜食咖啡，來創造雪香亭招牌的新生命，</a> 
+                            <a>希望藉由老屋空間結合甜食咖啡，來創造雪香亭招牌的新生命，</a>
                             <a>並讓更多人進入空間認識地方文化背景。</a>
                         </p>
                         <div class="btn-wrapper-intro d-flex">
@@ -144,54 +151,55 @@
     </div>
     <!-- 社群按鈕 start -->
 
-<!--漢堡選單動畫-->
-<script>
-    const menuOpenBtn = document.querySelector('.navbar-rwd-menu');
-    const menuCloseBtn = document.querySelector('.menu-close');
-    const navbarMenu = document.querySelector('.navbar-rwd-open');
+    <!--漢堡選單動畫-->
+    <script>
+        const menuOpenBtn = document.querySelector('.navbar-rwd-menu');
+        const menuCloseBtn = document.querySelector('.menu-close');
+        const navbarMenu = document.querySelector('.navbar-rwd-open');
 
-    menuOpenBtn.addEventListener('click', () => {
-        navbarMenu.classList.add('active');
-    });
-
-    menuCloseBtn.addEventListener('click', () => {
-        navbarMenu.classList.remove('active');
-    });
-</script>
-
-<!--社群按鈕動畫-->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const socialBtn = document.querySelector('.floating-socials');
-
-        window.addEventListener('scroll', () => {
-            // 一屏高度
-            const screenHeight = window.innerHeight;
-            const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-            if (scrollTop > screenHeight) {
-                socialBtn.classList.add('show');
-            } else {
-                socialBtn.classList.remove('show');
-            }
+        menuOpenBtn.addEventListener('click', () => {
+            navbarMenu.classList.add('active');
         });
-    });
-</script>
 
-<!-- 選單下滑動畫-->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const navbar = document.querySelector('.navbar-scroll');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('active');
-            } else {
-                navbar.classList.remove('active');
-            }
+        menuCloseBtn.addEventListener('click', () => {
+            navbarMenu.classList.remove('active');
         });
-    });
-</script>
+    </script>
+
+    <!--社群按鈕動畫-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const socialBtn = document.querySelector('.floating-socials');
+
+            window.addEventListener('scroll', () => {
+                // 一屏高度
+                const screenHeight = window.innerHeight;
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+                if (scrollTop > screenHeight) {
+                    socialBtn.classList.add('show');
+                } else {
+                    socialBtn.classList.remove('show');
+                }
+            });
+        });
+    </script>
+
+    <!-- 選單下滑動畫-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.querySelector('.navbar-scroll');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('active');
+                } else {
+                    navbar.classList.remove('active');
+                }
+            });
+        });
+    </script>
 
 </body>
+
 </html>
