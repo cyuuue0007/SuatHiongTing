@@ -435,70 +435,76 @@
 /* 商店介紹 end */
 
 /* 產品輪播 start */
+/* 外層容器維持 */
 .container-product {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.product-list {
-    display: flex;
-    width: 100vw;
-    height: 1080px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.productsection-tittle {
-    display: flex;
-    width: 100vw;
-    height: 352px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    color: $Neutral-Gray;
-}
-
+/* 輪播區域 */
 .carousel {
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    white-space: nowrap;
+    overflow: hidden;
+    /* 改成隱藏超出，不要 auto 滑動 */
+    width: 100%;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* 預設桌機版：5個 */
+.carousel-item {
+    scroll-snap-align: start;
 }
 
 .carousel-wrapper {
     display: flex;
-    align-items: center;
-    gap: 40px;
+    gap: 20px;
+    width: max-content;
+    /* 自動根據內容寬度 */
+    animation: scroll-left 40s linear infinite;
+    /* 無限線性動畫 */
 }
 
-.carousel-item {
-    display: flex;
-    align-items: center;
+/* 產品圖片樣式 */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 375px; /* 限制最大高度，避免圖片太高，可調整 */
+    max-width: 375px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
+/* 標題 */
+.productsection-tittle {
+    text-align: center;
+    margin-bottom: 120px;
+    color:$Neutral-Gray;
+}
+
+/* CTA按鈕區域 */
 .btn-wrapper-product {
     display: flex;
-    width: 100vw;
-    padding: 70px 772px;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
+    margin-top: 40px;
 }
 
 .btn-product-learn-more {
-    display: flex;
+    display: inline-flex;
     width: 240px;
     height: 40px;
-    padding: 8px;
-    justify-content: center;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
     border: 1px solid $Neutral-Gray;
     color: $Neutral-Gray;
     text-decoration: none;
@@ -506,11 +512,11 @@
 
 .btn-product-learn-more:hover {
     background-color: $Neutral-Gray;
-    border-color: $Neutral-Gray;
     color: $Primary;
 }
 
-/* 產品輪播 start */
+
+
 
 /* footer start */
 .footer {
