@@ -383,7 +383,6 @@
         /* 取消 min-width 限制 */
         height: auto;
         /* 高度自適應 */
-        gap: 30px;
         /* 上下間距 */
         padding: 0 10px;
         /* 兩側留邊距 */
@@ -418,6 +417,7 @@
     .store-intro-title {
         width: 100%;
         font-size: 28px;
+        line-height: 1.5rem;
         /* 字體縮小 */
     }
 
