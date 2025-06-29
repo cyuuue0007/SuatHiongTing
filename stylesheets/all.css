@@ -5177,6 +5177,7 @@ html, body {
   /* 自動根據內容寬度 */
   animation: scroll-left 40s linear infinite;
   /* 無限線性動畫 */
+  animation-play-state: paused;
 }
 
 /* 產品圖片樣式 */

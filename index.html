@@ -202,10 +202,9 @@
 
     <!-- 產品輪播 -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        window.addEventListener('load', () => {
             const wrapper = document.querySelector('.carousel-wrapper');
-            const items = wrapper.innerHTML;
-            wrapper.innerHTML += items; // 複製一份，形成無縫滾動
+            wrapper.style.animationPlayState = 'running';
         });
     </script>
 
