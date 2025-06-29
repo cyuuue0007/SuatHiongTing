@@ -234,7 +234,7 @@
 
 .list-item:hover,
 .list-item.active {
-    color: rgba(67, 32, 24, 0.9);
+    color: #C7A27C;
 }
 
 .bg {
@@ -552,7 +552,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 16px;
+    gap: 10px;
+    margin-top: 40px;
 }
 
 .footer-contarct-area-copyright {
@@ -561,7 +562,7 @@
     font-family: "Noto Sans TC";
     font-size: 14px;
     line-height: 14px;
-    margin-top: 70px;
+    margin-top: 170px;
 }
 
 /* footer end */
@@ -571,7 +572,7 @@
     position: fixed;
     top: 79%;
     right: 18px;
-    background-color: $Primary;
+    background-color: #C7A27C;
     border-radius: 24px;
     padding: 20px 10px;
     display: flex;
