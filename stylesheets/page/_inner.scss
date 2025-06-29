@@ -12,14 +12,12 @@
     margin: 0 auto;
 }
 
-.container-main {
+.navbar-wrapper {
     display: flex;
     position: fixed;
     height: 64px;
-    width: 1776px;
-    margin-top: 32px;
-    margin-left: 80px;
-    margin-right: 80px;
+    width: 100vw;
+    margin-top: 2%;
     z-index: 100;
     @media screen and (max-width: 768px) {
         display: none;
@@ -135,6 +133,7 @@
 .logo {
     width: auto;
     height: auto;
+    margin-left: 5%;
 }
 
 .brand {
@@ -156,7 +155,8 @@
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-left: auto; 
+    margin-left: auto;
+    margin-right: 5%; 
     margin-bottom: 0; 
 }
 
@@ -203,9 +203,10 @@
 
 /* 商店介紹 start */
 .store-intro {
-    width: 1920px;
+    width: 100%;
     height: 1080px;
-    padding: 152px 460px;
+    margin: 0 auto;  /* 置中容器 */
+    padding: 152px 0;  /* 上下 padding，左右改成 0 */
     box-sizing: border-box;
 }
 
@@ -214,7 +215,8 @@
     width: 1000px;
     height: 640px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    margin: 0 auto;  /* 讓這層也置中 */
     box-sizing: border-box;
 }
 
@@ -346,7 +348,7 @@
 
 .product-list {
     display: flex;
-    width: 1920px;
+    width: 100vw;
     height: 1080px;
     flex-direction: column;
     justify-content: center;
@@ -356,7 +358,7 @@
 
 .productsection-tittle {
     display: flex;
-    width: 1920px;
+    width: 100vw;
     height: 352px;
     flex-direction: column;
     justify-content: center;
@@ -386,7 +388,7 @@
 
 .btn-wrapper-product{
     display: flex;
-    width: 1920px;
+    width: 100vw;
     padding: 70px 772px;
     flex-direction: column;
     justify-content: center;
@@ -419,7 +421,7 @@
 }
 
 .container-footer {
-    width: 1920px;
+    width: 100vw;
     height: 400px;
     display: flex;
     justify-content: center;
