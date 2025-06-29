@@ -480,17 +480,46 @@
 .carousel-item img {
     width: 100%;
     height: auto;
-    max-height: 375px; /* 限制最大高度，避免圖片太高，可調整 */
+    max-height: 375px;
+    /* 限制最大高度，避免圖片太高，可調整 */
     max-width: 375px;
     object-fit: cover;
     border-radius: 4px;
 }
 
 /* 標題 */
-.productsection-tittle {
+.productsection-title {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #EFECE7;
     text-align: center;
-    margin-bottom: 70px;
-    color:$Neutral-Gray;
+    margin-bottom: 8px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+}
+
+.productsection-subtitle {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: lighten($Neutral-Gray, 20%);
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
 }
 
 /* CTA按鈕區域 */
