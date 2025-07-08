@@ -4675,18 +4675,25 @@ progress {
 }
 /* 顏色 */
 /* 內容 */
-html, body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+html {
   box-sizing: border-box;
-  overflow-x: hidden;
-  font-family: "Noto Sans TC", "sans-serif";
+  font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
   scrollbar-gutter: stable;
   background-color: #6C3427;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
   width: 100%;
-  height: auto;
+  margin: 0;
+  background-color: #6C3427;
 }
 
 .d-flex {
@@ -4720,6 +4727,12 @@ html, body {
 }
 
 /* 全站 start */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .main {
   position: relative;
 }
@@ -4952,12 +4965,11 @@ html, body {
 
 /* 主要主視覺圖片 */
 .bg-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 1;
@@ -5159,6 +5171,7 @@ html, body {
 
 /* 輪播區域 */
 .carousel {
+  justify-content: center;
   overflow: hidden;
   /* 改成隱藏超出，不要 auto 滑動 */
   width: 100%;
@@ -5179,6 +5192,8 @@ html, body {
 
 .carousel-wrapper {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   width: -moz-max-content;
   width: max-content;

@@ -3,9 +3,14 @@
 
 /* 全站 start */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .main {
-    position: relative
-    
+    position: relative;
 }
 
 .main-wrapper {
@@ -238,12 +243,11 @@
 
 /* 主要主視覺圖片 */
 .bg-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     z-index: 1;
 }
@@ -453,6 +457,7 @@
 
 /* 輪播區域 */
 .carousel {
+    justify-content: center;
     overflow: hidden;
     /* 改成隱藏超出，不要 auto 滑動 */
     width: 100%;
@@ -475,6 +480,8 @@
 
 .carousel-wrapper {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     width: max-content;
     /* 自動根據內容寬度 */
