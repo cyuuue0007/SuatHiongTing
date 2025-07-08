@@ -12,11 +12,12 @@ $Neutral-White: #FFFFFF;
 /* 內容 */
 html {
     box-sizing: border-box;
-    font-family: "Noto Sans TC", sans-serif;
-    font-weight: 400;
+    font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
     scrollbar-gutter: stable;
     background-color: #6C3427;
     overflow-x: hidden;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 *,
