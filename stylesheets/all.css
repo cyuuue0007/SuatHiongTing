@@ -4684,6 +4684,9 @@ html, body {
   font-family: "Noto Sans TC", "sans-serif";
   font-weight: 400;
   scrollbar-gutter: stable;
+  background-color: #6C3427;
+  width: 100%;
+  height: auto;
 }
 
 .d-flex {
@@ -4718,11 +4721,7 @@ html, body {
 
 /* 全站 start */
 .main {
-  background-color: #6C3427;
-  text-align: center;
-  width: 100vw;
-  height: auto;
-  margin: 0 auto;
+  position: relative;
 }
 
 .main-wrapper {
@@ -4735,18 +4734,12 @@ html, body {
   z-index: -1;
 }
 
-.main-wrapper-img {
-  background-color: #441200;
-  width: 100vw;
-  display: block;
-}
-
 /* === 桌機版 navbar === */
 .navbar-wrapper {
   display: flex;
   position: fixed;
   height: 64px;
-  width: 100vw;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: 100;
@@ -4974,10 +4967,13 @@ html, body {
 /* 商店介紹 start */
 .content-wrapper {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: auto;
   gap: 120px;
-  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .store-intro {
@@ -4992,20 +4988,24 @@ html, body {
 
 .container-store-intro {
   display: flex;
-  width: 100%;
-  height: 100%;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
   box-sizing: border-box;
+  flex: 1 1 50%;
 }
 
 .store-img,
 .store-txt {
-  width: 500px;
-  height: 640px;
+  width: 100%;
+  height: 100%;
   flex-shrink: 0;
   box-sizing: border-box;
+  flex: 1 1 50%;
 }
 
 .store-img {
@@ -5094,7 +5094,7 @@ html, body {
 }
 
 /* 🎯 RWD for mobile */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .container-store-intro {
     flex-direction: column;
     /* 變成上下排列 */
@@ -5154,6 +5154,7 @@ html, body {
   align-items: center;
   padding: 0;
   box-sizing: border-box;
+  width: 100%;
 }
 
 /* 輪播區域 */
@@ -5261,11 +5262,15 @@ html, body {
 
 /* footer start */
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   background-color: #EFECE7;
 }
 
 .container-footer {
-  width: 100vw;
+  width: 100%;
   height: 400px;
   display: flex;
   justify-content: center;
