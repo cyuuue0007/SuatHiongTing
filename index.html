@@ -107,6 +107,7 @@
                 <!-- footer start -->
                 <section class="footer">
                     <div class="container-footer d-flex">
+                        <canvas id="canvas" width="300" height="300"></canvas>
                         <div class="footer-content">
                             <div class="footer-contarct-area">
                                 <div class="footer-contarct-area-contarct">
@@ -114,10 +115,10 @@
                                     <a>地址　嘉義縣大林鎮中山路68號</a>
                                     <a>營業　10:30-19:00（公休日詳見IG）</a>
                                 </div>
-                                <div class="footer-contarct-area-copyright">
-                                    <a>CopyRight © 2025 SUAT HIONG TING.All rights reserved.</a>
-                                </div>
                             </div>
+                        </div>
+                        <div class="footer-contarct-area-copyright">
+                            <a>CopyRight © 2025 SUAT HIONG TING.All rights reserved.</a>
                         </div>
                     </div>
                 </section>
@@ -207,7 +208,16 @@
             wrapper.style.animationPlayState = 'running';
         });
     </script>
+    <script type="module">
+        import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
 
+        new DotLottie({
+            autoplay: true,
+            loop: true,
+            canvas: document.getElementById("canvas"),
+            src: "https://lottie.host/c6561b24-7cc9-4d68-8e50-1fd8d1c94502/YEhc610C8L.lottie", // replace with your .lottie or .json file URL
+        });
+    </script>
 </body>
 
 </html>
