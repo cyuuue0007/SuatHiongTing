@@ -1,0 +1,92 @@
+@use "../variables" as *;
+
+.suathiongting-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 999;
+  background-color: rgba(225, 225, 225, 0.55);
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 0 80px;
+  max-width: 1440px;
+}
+.logo {
+  display: block;
+  width: auto;
+  height: 24px;
+}
+.nav-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.img-banner {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.intro-image-text-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1180px;
+  padding: 0px 36px;
+  gap: 48px;
+}
+
+.img-intro {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 490px;
+}
+.intro-text {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: column;
+  text-align: left;
+  gap: 64px;
+  width: 100%;
+  flex: 1 1 50%;
+  padding: 219px 0;
+}
+.intro-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 36px;
+  border: 1px solid #efece7;
+}
+.product-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.product-carousel-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
