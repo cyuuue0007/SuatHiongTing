@@ -242,4 +242,40 @@ a {
   justify-content: center;
   align-items: center;
   gap: 18px;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.floating-button.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.floating-button .floating-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.floating-button .floating-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.floating-button img {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.floating-button img:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=all.css.map */

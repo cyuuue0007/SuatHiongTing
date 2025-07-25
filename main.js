@@ -24,3 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     wrapper.style.animationDuration = `${duration}s`;
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const floatBtn = document.querySelector(".floating-button");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 200) {
+            floatBtn.classList.add("active");
+        } else {
+            floatBtn.classList.remove("active");
+        }
+    });
+});
