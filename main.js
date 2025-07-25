@@ -51,3 +51,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+//小網選單
+window.addEventListener('scroll', function () {
+    const header = document.querySelector('.suathiongting-header');
+    const floatingBtn = document.querySelector('.floating-button');
+
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+        floatingBtn.classList.add('active');
+    } else {
+        header.classList.remove('scrolled');
+        floatingBtn.classList.remove('active');
+    }
+});
+
+//小網選單展開
+const menuOpen = document.querySelector('.nav-menu-open');
+const menuClose = document.querySelector('.mobile-nav-menu-close');
+const overlay = document.querySelector('.mobile-nav-overlay');
+
+menuOpen.addEventListener('click', () => {
+    overlay.classList.add('active');
+});
+
+menuClose.addEventListener('click', () => {
+    overlay.classList.remove('active');
+});
