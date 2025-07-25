@@ -1,3 +1,4 @@
+//輪播
 document.addEventListener("DOMContentLoaded", () => {
     const marquee = document.getElementById("marqueeTrack");
 
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     wrapper.style.animationDuration = `${duration}s`;
 });
 
-
+//懸浮按鈕
 document.addEventListener("DOMContentLoaded", function () {
     const floatBtn = document.querySelector(".floating-button");
 
@@ -34,6 +35,19 @@ document.addEventListener("DOMContentLoaded", function () {
             floatBtn.classList.add("active");
         } else {
             floatBtn.classList.remove("active");
+        }
+    });
+});
+
+//nav陰影
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector(".suathiongting-header");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 10) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
         }
     });
 });
