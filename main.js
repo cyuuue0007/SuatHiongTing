@@ -3,40 +3,23 @@ window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     const logo = preloader.querySelector('.loader img');
 
-    // 1. logo 淡入（CSS已設定 0.5s 延遲 + 1s 淡入）
-    // 2. 停留 0.8 秒後開始 logo 淡出（0.5秒）
-    setTimeout(() => {
-        logo.style.animation = 'logoFadeOut 0.5s forwards';
-    }, 2300); // 0.5 + 1 + 0.8 = 2.3 秒
-
-    // 3. logo 淡出結束後，再讓整個背景淡出（0.5秒）
+    // 4.5秒後，開始背景淡出
     setTimeout(() => {
         preloader.classList.add('fade-out');
-    }, 2800); // logo淡出0.5秒後開始背景淡出
+    }, 2400);
 
-    // 4. 背景淡出結束後隱藏 loading 容器
-    preloader.addEventListener('transitionend', () => {
-        preloader.style.display = 'none';
+    // 背景淡出動畫結束，隱藏整個 loading 容器
+    preloader.addEventListener('animationend', (e) => {
+        if (e.animationName === 'preloaderFadeOut') {
+            preloader.style.display = 'none';
+        }
     });
 });
 
-//logo淡出
-window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    const logo = preloader.querySelector('.loader img');
 
-    setTimeout(() => {
-        logo.classList.add('fade-out');  // 加 class 觸發淡出動畫
-    }, 2300); // 0.5 + 1 + 0.8 = 2.3 秒
 
-    setTimeout(() => {
-        preloader.classList.add('fade-out');
-    }, 2800);
 
-    preloader.addEventListener('transitionend', () => {
-        preloader.style.display = 'none';
-    });
-});
+
 
 
 

@@ -120,56 +120,42 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
   flex-direction: column;
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.5s ease;
+  z-index: 9999;
   pointer-events: auto;
 }
 
-#preloader.fade-out {
+.loader img {
   opacity: 0;
-  visibility: hidden;
+  animation: logoFadeInOut 4.5s forwards;
+  will-change: opacity;
+}
+
+@keyframes logoFadeInOut {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  } /* 淡入大約 0.45秒 */
+  10% {
+    opacity: 1;
+  } /* 停留約 3秒 */
+  70% {
+    opacity: 0;
+  } /* 淡出約 0.9秒 */
+}
+#preloader.fade-out {
+  animation: preloaderFadeOut 1s forwards;
   pointer-events: none;
 }
 
-.loader img {
-  opacity: 0;
-  animation: logoFadeIn 1s forwards;
-  animation-delay: 0.5s;
-}
-
-/* logo 淡入動畫 */
-@keyframes logoFadeIn {
-  to {
-    opacity: 1;
-  }
-}
-/* logo 淡出動畫 */
-@keyframes logoFadeOut {
+@keyframes preloaderFadeOut {
   to {
     opacity: 0;
-  }
-}
-.loader img {
-  opacity: 0;
-  animation: logoFadeIn 1s forwards;
-  animation-delay: 0.5s;
-}
-
-.loader img.fade-out {
-  animation: logoFadeOut 0.5s forwards;
-}
-
-@keyframes logoFadeIn {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes logoFadeOut {
-  to {
-    opacity: 0;
+    visibility: hidden;
   }
 }
 .suathiongting-header {
