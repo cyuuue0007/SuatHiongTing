@@ -9,23 +9,36 @@ $Black: #160601;
 $White: #ffffff;
 
 /* 字級 */
+// 文字使用範例
 h1 {
-  font-size: 1.5rem;
-  line-height: 3rem;
-  font-weight: 500;
+  font-size: 2.25rem; // 約 36px
 }
 h2 {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-h3 {
-  font-size: 0.75rem;
-  line-height: 1.125rem;
+  font-size: 1.875rem; // 約 30px
 }
 p {
-  font-size: 0.75rem;
-  line-height: 1.125rem;
+  font-size: 1rem; // 16px
 }
+.note {
+  font-size: 0.875rem; // 約 14px
+}
+
+// 手機版調整
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem; // 約 28px
+  }
+  h2 {
+    font-size: 1.5rem; // 約 24px
+  }
+  p {
+    font-size: 0.9375rem; // 約 15px
+  }
+  .note {
+    font-size: 0.8125rem; // 約 13px
+  }
+}
+
 /* 內容 */
 html {
   box-sizing: border-box;

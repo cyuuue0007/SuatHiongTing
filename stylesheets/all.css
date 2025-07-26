@@ -2,26 +2,35 @@
 /* 顏色 */
 /* 字級 */
 h1 {
-  font-size: 1.5rem;
-  line-height: 3rem;
-  font-weight: 500;
+  font-size: 2.25rem;
 }
 
 h2 {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-h3 {
-  font-size: 0.75rem;
-  line-height: 1.125rem;
+  font-size: 1.875rem;
 }
 
 p {
-  font-size: 0.75rem;
-  line-height: 1.125rem;
+  font-size: 1rem;
 }
 
+.note {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.9375rem;
+  }
+  .note {
+    font-size: 0.8125rem;
+  }
+}
 /* 內容 */
 html {
   box-sizing: border-box;
@@ -119,10 +128,6 @@ a {
   gap: 48px;
 }
 
-.mobile-nav-overlay {
-  display: none;
-}
-
 /* mobile */
 @media (max-width: 768px) {
   .nav-container {
@@ -168,15 +173,20 @@ a {
     inset: 0;
     background: linear-gradient(to bottom, rgb(60, 20, 0), rgba(60, 20, 0, 0.9), rgba(60, 20, 0, 0.3));
     z-index: 1000;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
   .mobile-nav-overlay.active {
-    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
-  .mobile-nav-overlay .nav-top {
+  .nav-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -184,19 +194,24 @@ a {
     height: 100%;
     margin: 0 30px;
   }
-  .mobile-nav-overlay .logo {
+  .logo {
     height: 32px;
   }
-  .mobile-nav-overlay .mobile-nav-menu-close {
+  .mobile-nav-menu-close {
     height: 24px;
     cursor: pointer;
   }
-  .mobile-nav-overlay .nav-top-list-container {
+  .nav-top-list-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 48px;
+  }
+}
+@media (min-width: 769px) {
+  .mobile-nav-overlay {
+    display: none !important;
   }
 }
 .img-banner {
