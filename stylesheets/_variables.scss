@@ -12,30 +12,38 @@ $White: #ffffff;
 // 文字使用範例
 h1 {
   font-size: 2.25rem; // 約 36px
+  line-height: 1.2;
 }
 h2 {
   font-size: 1.875rem; // 約 30px
+  line-height: 1.3;
 }
 p {
   font-size: 1rem; // 16px
+  line-height: 1.5;
 }
-.note {
+h3 {
   font-size: 0.875rem; // 約 14px
+  line-height: 1.4;
 }
 
 // 手機版調整
 @media (max-width: 768px) {
   h1 {
     font-size: 1.75rem; // 約 28px
+    line-height: 1.3;
   }
   h2 {
     font-size: 1.5rem; // 約 24px
+    line-height: 1.35;
   }
   p {
     font-size: 0.9375rem; // 約 15px
+    line-height: 1.5;
   }
-  .note {
+  h3 {
     font-size: 0.8125rem; // 約 13px
+    line-height: 1.4;
   }
 }
 
