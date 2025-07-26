@@ -1,20 +1,44 @@
 //loaging
+// loading 預載動畫
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     const logo = preloader.querySelector('.loader img');
 
-    // 4.5秒後，開始背景淡出
+    if (sessionStorage.getItem('preloaderShown')) {
+        // 已看過動畫，直接隱藏預載層（用透明度和可見性，避免閃爍）
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+        return;
+    }
+
+    // 1. 延遲0.5秒，logo淡入
+    setTimeout(() => {
+        logo.classList.add('show');
+    }, 1000);
+
+    // 2. 2秒後，logo淡出
+    setTimeout(() => {
+        logo.classList.remove('show');
+        logo.classList.add('fade-out');
+    }, 2500);
+
+    // 3. logo淡出後，背景預載層淡出
     setTimeout(() => {
         preloader.classList.add('fade-out');
-    }, 2400);
+    }, 3500);
 
-    // 背景淡出動畫結束，隱藏整個 loading 容器
-    preloader.addEventListener('animationend', (e) => {
-        if (e.animationName === 'preloaderFadeOut') {
+    // 4. 預載層淡出動畫結束時隱藏並紀錄狀態
+    preloader.addEventListener('transitionend', (e) => {
+        if (e.propertyName === 'opacity' && preloader.classList.contains('fade-out')) {
             preloader.style.display = 'none';
+            sessionStorage.setItem('preloaderShown', 'true');
         }
     });
 });
+
+
+
+
 
 
 

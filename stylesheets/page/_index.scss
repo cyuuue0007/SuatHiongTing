@@ -11,7 +11,7 @@
   opacity: 1;
   visibility: visible;
   z-index: 9999;
-  transition: opacity 1s ease;
+  transition: opacity 5s ease, visibility 5s ease;
 }
 
 #preloader.fade-out {
@@ -22,19 +22,15 @@
 
 .loader img {
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 5s ease;
 }
 
-/* logo出現的動畫 */
 .loader img.show {
   opacity: 1;
-  transition: opacity 1s ease;
 }
 
-/* logo淡出的動畫 */
 .loader img.fade-out {
   opacity: 0;
-  transition: opacity 1s ease;
 }
 
 .suathiongting-header {

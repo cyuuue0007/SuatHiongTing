@@ -113,6 +113,7 @@ a:hover {
     margin-top: 150px;
   }
 }
+/* CSS部分 */
 #preloader {
   position: fixed;
   inset: 0;
@@ -120,44 +121,31 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  z-index: 9999;
   opacity: 1;
   visibility: visible;
-  z-index: 9999;
-  pointer-events: auto;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .loader img {
   opacity: 0;
-  animation: logoFadeInOut 4.5s forwards;
-  will-change: opacity;
+  transition: opacity 1s ease;
 }
 
-@keyframes logoFadeInOut {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 1;
-  } /* 淡入大約 0.45秒 */
-  10% {
-    opacity: 1;
-  } /* 停留約 3秒 */
-  70% {
-    opacity: 0;
-  } /* 淡出約 0.9秒 */
-}
-#preloader.fade-out {
-  animation: preloaderFadeOut 1s forwards;
-  pointer-events: none;
+.loader img.show {
+  opacity: 1;
 }
 
-@keyframes preloaderFadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
+.loader img.fade-out {
+  opacity: 0;
 }
+
 .suathiongting-header {
   position: fixed;
   display: flex;
