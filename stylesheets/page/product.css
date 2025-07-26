@@ -1,53 +1,45 @@
+@charset "UTF-8";
 /* 顏色 */
-$Primary: #6c3427;
-$Secoundary-Red: #b6362d;
-$Secoundary-Brown: #8a4d2a;
-$Secoundary-Yellow: #e9af53;
-$Secoundary-Blue: #5774b0;
-$Gray: #efece7;
-$Black: #160601;
-$White: #ffffff;
-
 /* 字級 */
-// 文字使用範例
 h1 {
-  font-size: 2.25rem; // 約 36px
+  font-size: 2.25rem;
   line-height: 1.2;
   margin-bottom: 24px;
 }
+
 h2 {
-  font-size: 1.875rem; // 約 30px
+  font-size: 1.875rem;
   line-height: 1.3;
 }
+
 p {
-  font-size: 1rem; // 16px
+  font-size: 1rem;
   line-height: 1.5;
 }
+
 h3 {
-  font-size: 0.875rem; // 約 14px
+  font-size: 0.875rem;
   line-height: 1.4;
 }
 
-// 手機版調整
 @media (max-width: 768px) {
   h1 {
-    font-size: 1.75rem; // 約 28px
+    font-size: 1.75rem;
     line-height: 1.3;
   }
   h2 {
-    font-size: 1.5rem; // 約 24px
+    font-size: 1.5rem;
     line-height: 1.35;
   }
   p {
-    font-size: 0.9375rem; // 約 15px
+    font-size: 0.9375rem;
     line-height: 1.5;
   }
   h3 {
-    font-size: 0.8125rem; // 約 13px
+    font-size: 0.8125rem;
     line-height: 1.4;
   }
 }
-
 /* 內容 */
 html {
   box-sizing: border-box;
@@ -86,7 +78,7 @@ a {
 }
 
 a:hover {
-  color: #8a4d2a; // 滑鼠移上去變色
+  color: #8a4d2a;
   cursor: pointer;
 }
 
@@ -106,9 +98,6 @@ a:hover {
     margin-top: 60px;
   }
 }
-
-
-
 .about-section-container {
   display: flex;
   justify-content: center;
@@ -124,4 +113,31 @@ a:hover {
     margin-top: 150px;
   }
 }
+.product-menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  gap: 30px;
+}
 
+.product-menu-text {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.product-menu-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+}/*# sourceMappingURL=product.css.map */
