@@ -31,10 +31,18 @@
   background: none;
   cursor: pointer;
 }
-.mobile-nav-overlay {
-  display: none;
+.logo {
+  display: block;
+  width: auto;
+  height: 24px;
 }
-.mobile-nav-list {
+.nav-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+.mobile-nav-overlay {
   display: none;
 }
 /* mobile */
@@ -45,6 +53,9 @@
   }
   .logo {
     max-height: 24px;
+  }
+  .nav-list-container {
+    display: none;
   }
   .nav-toggle-container {
     display: flex;
@@ -63,40 +74,7 @@
   .nav-toggle-container.active .nav-menu-close {
     display: inline;
   }
-  .nav-list-container {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #1c2230;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    padding: 20px 0;
 
-    /* 滑出動畫用 */
-    transform: translateY(-20px);
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    pointer-events: none;
-    transition: all 0.4s ease;
-  }
-
-  .nav-list-container.active {
-    transform: translateY(0);
-    opacity: 1;
-    max-height: 500px;
-    pointer-events: auto;
-  }
-  .nav-list-container ul {
-    flex-direction: column;
-    gap: 16px;
-  }
-  .nav-list-container.active {
-    display: block;
-  }
   .nav-top-container {
     position: fixed;
     display: flex;
@@ -122,11 +100,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     &.active {
       display: flex;
     }
-
     .nav-top {
       display: flex;
       justify-content: space-between;
@@ -138,26 +114,19 @@
     .logo {
       height: 32px;
     }
-
     .mobile-nav-menu-close {
       height: 24px;
       cursor: pointer;
     }
+    .nav-top-list-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 48px;
+    }
   }
 }
-
-.logo {
-  display: block;
-  width: auto;
-  height: 24px;
-}
-.nav-list-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 48px;
-}
-
 .img-banner {
   width: 100%;
   height: 100vh;
