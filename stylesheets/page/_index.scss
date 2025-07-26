@@ -36,6 +36,9 @@
   width: auto;
   height: 24px;
 }
+.logo :hover {
+  cursor: pointer;
+}
 .nav-list-container {
   display: flex;
   justify-content: center;
