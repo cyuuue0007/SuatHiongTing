@@ -215,3 +215,17 @@ window.addEventListener('scroll', () => {
     });
 });
 
+//切換菜單
+function showMenu(id, element) {
+    // 切換圖片
+    document.querySelectorAll('.product-menu-img').forEach(img => {
+        img.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+
+    // 切換選單樣式
+    document.querySelectorAll('.product-menu-tab li').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    element.classList.add('active');
+}

@@ -61,13 +61,25 @@
             <div class="section-container">
                 <div class="product-menu-container">
                     <div class="product-menu-text">
-                        <h1>內用菜單</h1>
+                        <h1>菜單</h1>
                     </div>
+
+                    <!-- 菜單選項 -->
+                    <ul class="product-menu-tab">
+                        <li onclick="showMenu('menu1', this)" class="active">內用</li>
+                        <li onclick="showMenu('menu2', this)">外帶</li>
+                    </ul>
+
+                    <!-- 圖片切換 -->
                     <div class="product-menu-img-container">
-                        <img src="./assets/img-meau-here.png" class="product-menu-img" alt="外帶菜單">
+                        <img id="menu1" class="product-menu-img active" src="./assets/img-meau-here.png" alt="內用菜單">
+                        <img id="menu2" class="product-menu-img" src="./assets/img-menu-take-out.png" alt="外帶菜單">
                     </div>
                 </div>
+            </div>
+        </div>
     </section>
+
 
     <section class="product-list">
         <div class="wrapper">

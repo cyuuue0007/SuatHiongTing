@@ -726,6 +726,7 @@ a:hover {
 
 .product-menu-img-container {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -739,6 +740,46 @@ a:hover {
   height: auto;
   margin: 30px 0;
   max-width: 800px;
+}
+
+.product-menu-tab {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.product-menu-tab li {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.product-menu-tab li.active {
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+
+.product-menu-img {
+  display: none;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.product-menu-img.active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  z-index: 1;
 }
 
 .product-list-container {
@@ -763,7 +804,7 @@ a:hover {
   align-items: center;
   flex-wrap: wrap;
   gap: 36px;
-  padding: 30px 0;
+  padding: 30px;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -805,6 +846,7 @@ a:hover {
 .product-list-block-container {
   position: relative; /* 讓 ::before 定位參考 */
   border-top: none; /* 先取消原本的實線 */
+  padding: 30px 0;
 }
 .product-menu-img-container::before,
 .product-list-block-container::before {
@@ -831,6 +873,7 @@ a:hover {
   .product-menu-container {
     margin-top: 50px;
     gap: 0;
+    align-items: flex-start;
   }
   .product-list-container {
     gap: 0;
@@ -856,6 +899,11 @@ a:hover {
   }
   .product-list-block-card-container {
     width: calc(50% - 8px); /* 一排兩個 */
+  }
+  .product-menu-tab {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
   }
 }
 .location-section-container {
