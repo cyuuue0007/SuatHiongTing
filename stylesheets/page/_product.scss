@@ -112,3 +112,10 @@
   text-align: left;
 }
 
+@media (max-width: 435px) {
+  .product-list-block-card-container {
+    width: 150px;
+    height: auto;
+    min-width: 100px;
+  }
+}
