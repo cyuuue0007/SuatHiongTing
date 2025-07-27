@@ -576,6 +576,42 @@ a:hover {
   border-bottom: 1px solid #ccc; /* 下線 */
 }
 
+.about-text {
+  position: relative; /* 讓 ::before ::after 定位參考 */
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: column;
+  text-align: left;
+  gap: 24px;
+  width: 100%;
+  flex: 1 1 50%;
+  padding: 36px 0;
+  border-top: none;
+  border-bottom: none;
+}
+.about-text::before, .about-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #ccc;
+  animation: lineExpand 2s forwards;
+}
+.about-text::before {
+  top: 0; /* 上線 */
+}
+.about-text::after {
+  bottom: 0; /* 下線 */
+  animation-delay: 0.5s; /* 延遲0.5秒跑，效果更有層次 */
+}
+
+@keyframes lineExpand {
+  to {
+    width: 100%;
+  }
+}
 /* mobile */
 @media (max-width: 768px) {
   .about-section-container {
@@ -690,6 +726,32 @@ a:hover {
   text-align: left;
 }
 
+.product-menu-img-container,
+.product-list-block-container {
+  position: relative; /* 讓 ::before 定位參考 */
+  border-top: none; /* 先取消原本的實線 */
+}
+.product-menu-img-container::before,
+.product-list-block-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background-color: #ccc;
+  animation: lineExpand 2s forwards;
+}
+
+.product-list-block-container::before {
+  animation-delay: 0.5s;
+}
+
+@keyframes lineExpand {
+  to {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   .product-menu-container {
     margin-top: 50px;
@@ -743,15 +805,30 @@ a:hover {
 }
 
 .location-map {
+  position: relative; /* 讓 ::before 定位參考 */
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  border-top: 1px solid #ccc; /* 上線 */
   padding-top: 48px;
 }
+.location-map::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 0; /* 從 0 開始 */
+  background-color: #ccc;
+  animation: lineExpand 2s forwards; /* 2秒動畫，執行完保持最後狀態 */
+}
 
+@keyframes lineExpand {
+  to {
+    width: 100%; /* 寬度從0變成100% */
+  }
+}
 .map-wrapper {
   position: relative;
   width: 100%;

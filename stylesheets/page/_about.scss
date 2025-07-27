@@ -46,6 +46,54 @@
   border-bottom: 1px solid #ccc; /* 下線 */
 }
 
+
+
+
+
+.about-text {
+  position: relative; /* 讓 ::before ::after 定位參考 */
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: column;
+  text-align: left;
+  gap: 24px;
+  width: 100%;
+  flex: 1 1 50%;
+  padding: 36px 0;
+  border-top: none;
+  border-bottom: none;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #ccc;
+    animation: lineExpand 2s forwards;
+  }
+
+  &::before {
+    top: 0; /* 上線 */
+  }
+
+  &::after {
+    bottom: 0; /* 下線 */
+    animation-delay: 0.5s; /* 延遲0.5秒跑，效果更有層次 */
+  }
+}
+
+@keyframes lineExpand {
+  to {
+    width: 100%;
+  }
+}
+
+
+
+
+
 /* mobile */
 @media (max-width: 768px) {
   .about-section-container {

@@ -97,6 +97,38 @@
   text-align: left;
 }
 
+
+
+
+.product-menu-img-container,
+.product-list-block-container {
+  position: relative; /* 讓 ::before 定位參考 */
+  border-top: none; /* 先取消原本的實線 */
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background-color: #ccc;
+    animation: lineExpand 2s forwards;
+  }
+}
+
+.product-list-block-container::before {
+  animation-delay: 0.5s; // 第二條線條延遲0.5秒跑動畫，效果會比較有層次感
+}
+
+@keyframes lineExpand {
+  to {
+    width: 100%;
+  }
+}
+
+
+
 @media (max-width: 768px) {
   .product-menu-container {
     margin-top: 50px;

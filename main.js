@@ -177,3 +177,26 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf)
+
+
+//線條滾動
+document.addEventListener("DOMContentLoaded", () => {
+    const aboutTexts = document.querySelectorAll(".about-text");
+
+    if (aboutTexts.length === 0) return;
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate-lines");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+
+    aboutTexts.forEach(el => observer.observe(el));
+});
+
