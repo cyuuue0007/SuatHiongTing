@@ -79,7 +79,7 @@ h5 {
   height: 36px;
   border: 1px solid #efece7;
   background-color: transparent;
-  color: #efece7; 
+  color: #efece7;
   text-decoration: none;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -87,7 +87,7 @@ h5 {
 
   &.primary {
     &:hover {
-      background-color: #efece7; 
+      background-color: #efece7;
     }
   }
 
@@ -111,8 +111,7 @@ h5 {
 /* 內容 */
 html {
   box-sizing: border-box;
-  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-  /*scrollbar-gutter: stable;*/
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; /*scrollbar-gutter: stable;*/
   overflow-x: hidden;
   font-size: 16px;
   line-height: 1.5rem;

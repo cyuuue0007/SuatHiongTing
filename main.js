@@ -137,3 +137,25 @@ menuOpen.addEventListener('click', () => {
 menuClose.addEventListener('click', () => {
     overlay.classList.remove('active');
 });
+
+
+//商品卡片瀑布效果
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.product-list-block-card-container');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // 加完class後停止觀察，避免重複觸發
+            }
+        });
+    }, {
+        threshold: 0.3, // 元素 10% 進入視窗就觸發
+    });
+
+    cards.forEach(card => {
+        observer.observe(card);
+    });
+});
+
