@@ -201,6 +201,75 @@ a:hover {
   opacity: 0;
 }
 
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cover-text {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgba(239, 236, 231, 0.5);
+  font-size: 5rem;
+  font-weight: 600;
+  pointer-events: none; /* 不影響點擊 */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none; /* 文字不可被選取 */
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 3s forwards;
+  animation-delay: 1s;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideInRight 3s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+}
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+}
+.banner {
+  position: relative;
+}
+
+.img-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background-color: rgba(0, 0, 0, 0.4); /* 40% 透明黑色遮罩 */
+  pointer-events: none; /* 不影響下面元素互動 */
+}
+
 .suathiongting-header {
   position: fixed;
   display: flex;
