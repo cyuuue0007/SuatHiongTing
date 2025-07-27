@@ -21,11 +21,13 @@
 
 .loader img {
   opacity: 0;
-  transition: opacity 3s ease;
+  transform: scale(0.2);
+  transition: opacity 0.8s ease, transform 3s ease;
 }
 
 .loader img.show {
   opacity: 1;
+  transform: scale(1);
 }
 
 .loader img.fade-out {
@@ -83,7 +85,6 @@
   }
 }
 
-
 .banner {
   position: relative;
 }
@@ -100,7 +101,6 @@
   background-color: rgba(0, 0, 0, 0.4); /* 40% 透明黑色遮罩 */
   pointer-events: none; /* 不影響下面元素互動 */
 }
-
 
 .suathiongting-header {
   position: fixed;
