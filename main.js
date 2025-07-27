@@ -20,12 +20,12 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         logo.classList.remove('show');
         logo.classList.add('fade-out');
-    }, 2500);
+    }, 1500);
 
     // 3. logo淡出後，背景預載層淡出
     setTimeout(() => {
         preloader.classList.add('fade-out');
-    }, 3500);
+    }, 2000);
 
     // 4. 預載層淡出動畫結束時隱藏並紀錄狀態
     preloader.addEventListener('transitionend', (e) => {

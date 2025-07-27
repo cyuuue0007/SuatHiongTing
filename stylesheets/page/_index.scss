@@ -1,6 +1,5 @@
 @use "../variables" as *;
 
-/* CSS部分 */
 #preloader {
   position: fixed;
   inset: 0;
@@ -11,7 +10,7 @@
   opacity: 1;
   visibility: visible;
   z-index: 9999;
-  transition: opacity 5s ease, visibility 5s ease;
+  transition: opacity 2s ease, visibility 2s ease;
 }
 
 #preloader.fade-out {
@@ -22,7 +21,7 @@
 
 .loader img {
   opacity: 0;
-  transition: opacity 5s ease;
+  transition: opacity 1s ease;
 }
 
 .loader img.show {
