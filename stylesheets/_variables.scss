@@ -138,6 +138,9 @@ body {
   margin: 0;
   opacity: 0;
   transition: opacity 0.9s ease-in-out;
+  scroll-snap-type: y mandatory; /* 垂直吸附 */
+  scroll-behavior: smooth; /* 平滑滾動 */
+  overflow: hidden;
 }
 
 body.fade-in {

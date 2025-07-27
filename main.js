@@ -143,3 +143,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+
+// 滾動效果
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        },
+        {
+            threshold: 0.3,
+        }
+    );
+
+    document.querySelectorAll(".section-container").forEach((el) => {
+        observer.observe(el);
+    });
+});
+
+//滾動阻尼感
+const lenis = new Lenis({
+    duration: 50000,
+    easing: (t) => 1 - Math.pow(1 - t, 5) // 慣性感
+})
+
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
