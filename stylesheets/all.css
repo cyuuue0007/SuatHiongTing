@@ -190,7 +190,7 @@ a:hover {
 
 .loader img {
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 3s ease;
 }
 
 .loader img.show {
@@ -629,6 +629,9 @@ a:hover {
   width: 100%;
   height: 100%;
   max-width: 490px;
+  position: relative; /* 原本是flex item，可改成relative */
+  will-change: transform;
+  transition: transform 0.2s ease-out;
 }
 
 .about-text {

@@ -3,23 +3,16 @@ window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     const logo = preloader.querySelector('.loader img');
 
-    if (sessionStorage.getItem('preloaderShown')) {
-        // 已看過動畫，直接隱藏預載層（用透明度和可見性，避免閃爍）
-        preloader.style.opacity = '0';
-        preloader.style.visibility = 'hidden';
-        return;
-    }
-
     // 1. 延遲0.5秒，logo淡入
     setTimeout(() => {
         logo.classList.add('show');
-    }, 1000);
+    }, 100);
 
     // 2. 2秒後，logo淡出
     setTimeout(() => {
         logo.classList.remove('show');
         logo.classList.add('fade-out');
-    }, 1500);
+    }, 3000);
 
     // 3. logo淡出後，背景預載層淡出
     setTimeout(() => {
@@ -198,5 +191,27 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     aboutTexts.forEach(el => observer.observe(el));
+});
+
+
+//圖片滾動視差
+window.addEventListener('scroll', () => {
+    const images = document.querySelectorAll('.about-img');
+    const windowHeight = window.innerHeight;
+
+    images.forEach(img => {
+        const rect = img.getBoundingClientRect();
+
+        // 判斷圖片在視窗範圍內
+        if (rect.top < windowHeight && rect.bottom > 0) {
+            // 計算滾動百分比 (0~1)
+            const scrollPercent = (windowHeight - rect.top) / (windowHeight + rect.height);
+
+            // 控制圖片垂直移動範圍，負值往上，正值往下
+            const translateY = (scrollPercent - 0.5) * 40; // 移動範圍約-20px到+20px
+
+            img.style.transform = `translateY(${translateY}px)`;
+        }
+    });
 });
 
