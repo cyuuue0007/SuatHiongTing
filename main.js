@@ -1,5 +1,4 @@
 //loaging
-// loading 預載動畫
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     const logo = preloader.querySelector('.loader img');
@@ -37,25 +36,10 @@ window.addEventListener('load', () => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//頁面切換
+window.addEventListener('load', () => {
+    document.body.classList.add('fade-in');
+});
 
 //輪播
 document.addEventListener("DOMContentLoaded", () => {
