@@ -180,6 +180,7 @@ a:hover {
   visibility: visible;
   z-index: 9999;
   transition: opacity 2s ease, visibility 2s ease;
+  background-color: #6C3427;
 }
 
 #preloader.fade-out {
