@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     wrapper.style.animationDuration = `${duration}s`;
 });
 
+
 //懸浮按鈕
 document.addEventListener("DOMContentLoaded", function () {
     const floatBtn = document.querySelector(".floating-button");

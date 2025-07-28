@@ -3,7 +3,6 @@
 #preloader {
   position: fixed;
   inset: 0;
-  background: #6c3427;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,6 +10,7 @@
   visibility: visible;
   z-index: 9999;
   transition: opacity 2s ease, visibility 2s ease;
+  background-image: url(/assets/img-index-bg.svg);
 }
 
 #preloader.fade-out {
@@ -288,6 +288,15 @@
     padding: 0;
   }
 }
+
+@media (min-width: 768px) {
+  .img-intro {
+    width: 50%;
+  }
+  .intro-text {
+    width: 50%;
+  }
+}
 .product-swiper-container {
   display: flex;
   justify-content: center;
@@ -298,6 +307,7 @@
   height: 100%;
   gap: 24px;
   margin: 100px 0;
+  padding: 0 30px;
 }
 .swiper-wrapper {
   display: flex;
@@ -326,6 +336,7 @@
   margin-right: 40px;
   object-fit: cover;
 }
+
 
 @keyframes scroll-left {
   0% {
