@@ -784,7 +784,6 @@ a:hover {
 .product-menu-img {
   display: none;
   width: 100%;
-  max-width: 600px;
   margin: 0 auto;
   opacity: 0;
   visibility: hidden;
