@@ -355,76 +355,7 @@
     align-items: flex-start;
   }
 }
-.footer-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 60px;
-  padding: 50px 30px;
-  margin: 150px 0px;
-}
-.footer-text {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 24px;
-}
-.footer-text-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-}
-@media (max-width: 768px) {
-  .footer-container {
-    align-items: flex-start;
-  }
-}
-.floating-button {
-  position: fixed;
-  bottom: 24px;
-  right: 30px;
-  z-index: 999;
 
-  // 新增 ↓ 初始狀態為隱藏
-  opacity: 0;
-  transform: translateY(20px);
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-
-  // 新增 ↓ 加上 active class 時才顯示
-  &.active {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  .floating-button-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .floating-button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  img {
-    width: 48px;
-    height: 48px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-}
 
 .multiple-items-container {
   max-width: 1200px; /* 父層限制寬度 */
