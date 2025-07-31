@@ -1005,7 +1005,7 @@ a:hover {
   }
   .product-list-block-container {
     gap: 16px;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .product-list-block-card-container {
     width: calc(50% - 8px); /* 一排兩個 */
