@@ -15,8 +15,13 @@
   <meta property="og:image" content="https://cyuuue0007.github.io/SuatHiongTing/assets/og-img.png" />
 
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.38/bundled/lenis.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Slick CSS 樣式 -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
 
 </head>
 
@@ -70,11 +75,7 @@
 
   <section class="banner">
     <img src="./assets/img-banner.png" class="img-banner" alt="intro" />
-    <div class="banner-overlay"></div> 
-    <div class="cover-text">
-      <h2 class="slide-in-left">甜點咖啡</h2>
-      <h2 class="slide-in-right">老屋時光</h2>
-    </div>
+    <div class="banner-overlay"></div>
   </section>
 
 
@@ -100,6 +101,7 @@
     </div>
   </section>
 
+
   <section class="product-swiper">
     <div class="section-wrapper">
       <div class="product-swiper-container">
@@ -110,21 +112,26 @@
         <div class="button primary">
           <a href="product.html">看菜單</a>
         </div>
-        <div class="swiper-wrapper">
-          <div class="marquee">
-            <div class="marquee-track" id="marqueeTrack">
-              <img src="./assets/img-product-1.png" alt="產品1" />
-              <img src="./assets/img-product-2.png" alt="產品2" />
-              <img src="./assets/img-product-3.png" alt="產品3" />
-              <img src="./assets/img-product-4.png" alt="產品4" />
-              <img src="./assets/img-product-5.png" alt="產品5" />
-            </div>
+        <div class="multiple-items-container">
+          <div class="multiple-items">
+            <div class="slide-item"><img src="./assets/img-product-1.png" /></div>
+            <div class="slide-item"><img src="./assets/img-product-2.png" /></div>
+            <div class="slide-item"><img src="./assets/img-product-3.png" /></div>
+            <div class="slide-item"><img src="./assets/img-product-4.png" /></div>
+            <div class="slide-item"><img src="./assets/img-product-5.png" /></div>
+            <div class="slide-item"><img src="./assets/img-product-6.png" /></div>
           </div>
         </div>
+
       </div>
     </div>
     </div>
+    </div>
   </section>
+
+
+
+
 
 
   <footer>
@@ -163,9 +170,13 @@
     </div>
   </div>
 
-  </div>
-  </div>
+  <!-- jQuery（Slick 必要）-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick JS 功能 -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./main.js"></script>
+  <script src="./slick.js"></script>
 </body>
-<script src="./main.js"></script>
 
 </html>
